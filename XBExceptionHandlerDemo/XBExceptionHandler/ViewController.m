@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *app_Name = [infoDictionary objectForKey:@"CFBundleDisplayName"];
+    NSLog(@"%@",app_Name);
     
 }
 

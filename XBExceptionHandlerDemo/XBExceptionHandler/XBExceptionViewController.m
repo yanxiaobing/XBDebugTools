@@ -47,7 +47,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class) forIndexPath:indexPath];
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     XBExceptionInfo *info = _dataSource[indexPath.row];
-    cell.textLabel.text = info.name;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@-%@",info.date,info.name];
     return cell;
 }
 
