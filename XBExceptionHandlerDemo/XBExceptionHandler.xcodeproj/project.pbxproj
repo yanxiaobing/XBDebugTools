@@ -13,10 +13,10 @@
 		EDEAB33F1FE132250032F1C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDEAB33E1FE132250032F1C5 /* Assets.xcassets */; };
 		EDEAB3421FE132250032F1C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDEAB3401FE132250032F1C5 /* LaunchScreen.storyboard */; };
 		EDEAB3451FE132250032F1C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB3441FE132250032F1C5 /* main.m */; };
-		EDEAB34D1FE132B50032F1C5 /* XBExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB34C1FE132B50032F1C5 /* XBExceptionHandler.m */; };
-		EDEAB3531FE15E480032F1C5 /* XBExceptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB3521FE15E480032F1C5 /* XBExceptionViewController.m */; };
-		EDEAB3561FE1657A0032F1C5 /* XBExceptionDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB3551FE1657A0032F1C5 /* XBExceptionDetailsViewController.m */; };
-		EDEAB3591FE168CD0032F1C5 /* XBExceptionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB3581FE168CC0032F1C5 /* XBExceptionInfo.m */; };
+		EDEAB3641FE28CE90032F1C5 /* XBExceptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB35C1FE28CE90032F1C5 /* XBExceptionViewController.m */; };
+		EDEAB3651FE28CE90032F1C5 /* XBExceptionDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB35E1FE28CE90032F1C5 /* XBExceptionDetailsViewController.m */; };
+		EDEAB3661FE28CE90032F1C5 /* XBExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB3601FE28CE90032F1C5 /* XBExceptionHandler.m */; };
+		EDEAB3671FE28CE90032F1C5 /* XBExceptionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB3621FE28CE90032F1C5 /* XBExceptionInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +30,14 @@
 		EDEAB3411FE132250032F1C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDEAB3431FE132250032F1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDEAB3441FE132250032F1C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EDEAB34B1FE132B50032F1C5 /* XBExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBExceptionHandler.h; sourceTree = "<group>"; };
-		EDEAB34C1FE132B50032F1C5 /* XBExceptionHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBExceptionHandler.m; sourceTree = "<group>"; };
-		EDEAB3511FE15E480032F1C5 /* XBExceptionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBExceptionViewController.h; sourceTree = "<group>"; };
-		EDEAB3521FE15E480032F1C5 /* XBExceptionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBExceptionViewController.m; sourceTree = "<group>"; };
-		EDEAB3541FE1657A0032F1C5 /* XBExceptionDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBExceptionDetailsViewController.h; sourceTree = "<group>"; };
-		EDEAB3551FE1657A0032F1C5 /* XBExceptionDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBExceptionDetailsViewController.m; sourceTree = "<group>"; };
-		EDEAB3571FE168CC0032F1C5 /* XBExceptionInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBExceptionInfo.h; sourceTree = "<group>"; };
-		EDEAB3581FE168CC0032F1C5 /* XBExceptionInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBExceptionInfo.m; sourceTree = "<group>"; };
+		EDEAB35C1FE28CE90032F1C5 /* XBExceptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBExceptionViewController.m; sourceTree = "<group>"; };
+		EDEAB35D1FE28CE90032F1C5 /* XBExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBExceptionHandler.h; sourceTree = "<group>"; };
+		EDEAB35E1FE28CE90032F1C5 /* XBExceptionDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBExceptionDetailsViewController.m; sourceTree = "<group>"; };
+		EDEAB35F1FE28CE90032F1C5 /* XBExceptionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBExceptionInfo.h; sourceTree = "<group>"; };
+		EDEAB3601FE28CE90032F1C5 /* XBExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBExceptionHandler.m; sourceTree = "<group>"; };
+		EDEAB3611FE28CE90032F1C5 /* XBExceptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBExceptionViewController.h; sourceTree = "<group>"; };
+		EDEAB3621FE28CE90032F1C5 /* XBExceptionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBExceptionInfo.m; sourceTree = "<group>"; };
+		EDEAB3631FE28CE90032F1C5 /* XBExceptionDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBExceptionDetailsViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 		EDEAB3341FE132240032F1C5 /* XBExceptionHandler */ = {
 			isa = PBXGroup;
 			children = (
-				EDEAB35A1FE285130032F1C5 /* Classes */,
+				EDEAB35B1FE28CE90032F1C5 /* XBExceptionHandler */,
 				EDEAB3351FE132240032F1C5 /* AppDelegate.h */,
 				EDEAB3361FE132240032F1C5 /* AppDelegate.m */,
 				EDEAB3381FE132250032F1C5 /* ViewController.h */,
@@ -84,19 +84,43 @@
 			path = XBExceptionHandler;
 			sourceTree = "<group>";
 		};
-		EDEAB35A1FE285130032F1C5 /* Classes */ = {
+		EDEAB35B1FE28CE90032F1C5 /* XBExceptionHandler */ = {
 			isa = PBXGroup;
 			children = (
-				EDEAB34B1FE132B50032F1C5 /* XBExceptionHandler.h */,
-				EDEAB34C1FE132B50032F1C5 /* XBExceptionHandler.m */,
-				EDEAB3571FE168CC0032F1C5 /* XBExceptionInfo.h */,
-				EDEAB3581FE168CC0032F1C5 /* XBExceptionInfo.m */,
-				EDEAB3511FE15E480032F1C5 /* XBExceptionViewController.h */,
-				EDEAB3521FE15E480032F1C5 /* XBExceptionViewController.m */,
-				EDEAB3541FE1657A0032F1C5 /* XBExceptionDetailsViewController.h */,
-				EDEAB3551FE1657A0032F1C5 /* XBExceptionDetailsViewController.m */,
+				EDEAB36A1FE28D130032F1C5 /* View */,
+				EDEAB3691FE28D050032F1C5 /* Service */,
+				EDEAB3681FE28CFC0032F1C5 /* Model */,
 			);
-			path = Classes;
+			path = XBExceptionHandler;
+			sourceTree = "<group>";
+		};
+		EDEAB3681FE28CFC0032F1C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EDEAB35F1FE28CE90032F1C5 /* XBExceptionInfo.h */,
+				EDEAB3621FE28CE90032F1C5 /* XBExceptionInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EDEAB3691FE28D050032F1C5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EDEAB35D1FE28CE90032F1C5 /* XBExceptionHandler.h */,
+				EDEAB3601FE28CE90032F1C5 /* XBExceptionHandler.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EDEAB36A1FE28D130032F1C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDEAB35C1FE28CE90032F1C5 /* XBExceptionViewController.m */,
+				EDEAB35E1FE28CE90032F1C5 /* XBExceptionDetailsViewController.m */,
+				EDEAB3611FE28CE90032F1C5 /* XBExceptionViewController.h */,
+				EDEAB3631FE28CE90032F1C5 /* XBExceptionDetailsViewController.h */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,12 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDEAB3661FE28CE90032F1C5 /* XBExceptionHandler.m in Sources */,
 				EDEAB33A1FE132250032F1C5 /* ViewController.m in Sources */,
-				EDEAB3561FE1657A0032F1C5 /* XBExceptionDetailsViewController.m in Sources */,
 				EDEAB3451FE132250032F1C5 /* main.m in Sources */,
-				EDEAB3591FE168CD0032F1C5 /* XBExceptionInfo.m in Sources */,
-				EDEAB3531FE15E480032F1C5 /* XBExceptionViewController.m in Sources */,
-				EDEAB34D1FE132B50032F1C5 /* XBExceptionHandler.m in Sources */,
+				EDEAB3671FE28CE90032F1C5 /* XBExceptionInfo.m in Sources */,
+				EDEAB3641FE28CE90032F1C5 /* XBExceptionViewController.m in Sources */,
+				EDEAB3651FE28CE90032F1C5 /* XBExceptionDetailsViewController.m in Sources */,
 				EDEAB3371FE132240032F1C5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
