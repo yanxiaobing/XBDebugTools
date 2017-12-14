@@ -70,10 +70,23 @@
 		EDEAB3341FE132240032F1C5 /* XBExceptionHandler */ = {
 			isa = PBXGroup;
 			children = (
+				EDEAB35A1FE285130032F1C5 /* Classes */,
 				EDEAB3351FE132240032F1C5 /* AppDelegate.h */,
 				EDEAB3361FE132240032F1C5 /* AppDelegate.m */,
 				EDEAB3381FE132250032F1C5 /* ViewController.h */,
 				EDEAB3391FE132250032F1C5 /* ViewController.m */,
+				EDEAB33B1FE132250032F1C5 /* Main.storyboard */,
+				EDEAB33E1FE132250032F1C5 /* Assets.xcassets */,
+				EDEAB3401FE132250032F1C5 /* LaunchScreen.storyboard */,
+				EDEAB3431FE132250032F1C5 /* Info.plist */,
+				EDEAB3441FE132250032F1C5 /* main.m */,
+			);
+			path = XBExceptionHandler;
+			sourceTree = "<group>";
+		};
+		EDEAB35A1FE285130032F1C5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
 				EDEAB34B1FE132B50032F1C5 /* XBExceptionHandler.h */,
 				EDEAB34C1FE132B50032F1C5 /* XBExceptionHandler.m */,
 				EDEAB3571FE168CC0032F1C5 /* XBExceptionInfo.h */,
@@ -82,13 +95,8 @@
 				EDEAB3521FE15E480032F1C5 /* XBExceptionViewController.m */,
 				EDEAB3541FE1657A0032F1C5 /* XBExceptionDetailsViewController.h */,
 				EDEAB3551FE1657A0032F1C5 /* XBExceptionDetailsViewController.m */,
-				EDEAB33B1FE132250032F1C5 /* Main.storyboard */,
-				EDEAB33E1FE132250032F1C5 /* Assets.xcassets */,
-				EDEAB3401FE132250032F1C5 /* LaunchScreen.storyboard */,
-				EDEAB3431FE132250032F1C5 /* Info.plist */,
-				EDEAB3441FE132250032F1C5 /* main.m */,
 			);
-			path = XBExceptionHandler;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

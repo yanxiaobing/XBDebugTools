@@ -33,8 +33,7 @@
     return self;
 }
 
-
--(NSString *)toReadableDescription{
+-(NSString *)description{
     return [NSString stringWithFormat:@"date: %@\n\nname: %@\n\nreason: %@\n\nsystem_version: %@\n\napp_version: %@\n\napp_build: %@\n\ncallStackSymbols:\n%@", self.date, self.name, self.reason, self.systemVersion,self.appVersion,self.appBuild,self.callStackSymbols];
 }
 

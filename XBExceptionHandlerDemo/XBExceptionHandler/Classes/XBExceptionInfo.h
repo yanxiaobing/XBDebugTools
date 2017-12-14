@@ -19,7 +19,6 @@
 @property (nonatomic, strong) NSString *appVersion;
 @property (nonatomic, strong) NSString *appBuild;
 
-
--(NSString *)toReadableDescription;
+-(NSString *)description;
 
 @end
