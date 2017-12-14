@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 
@@ -25,19 +26,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)crashClick:(id)sender {
+    
+    NSArray *arr = @[@(1)];
+    NSLog(@"%@",arr[3]);
+}
 
 - (IBAction)btnClick:(id)sender {
-    
-    [[XBExceptionHandler sharedInstance] showExceptionTool];
-    
-//    NSArray *arr = @[@"1"];
-//
-//    NSLog(@"%@",arr[3]);
-//    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    window.windowLevel =  UIWindowLevelStatusBar + 1;
-//    window.hidden = NO;
-//    XBViewController * rvc = [[XBViewController alloc] init];
-//    window.rootViewController = rvc;
+    [[XBExceptionHandler sharedInstance] showExceptionTools];
 }
 
 @end

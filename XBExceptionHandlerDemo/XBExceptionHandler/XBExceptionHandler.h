@@ -15,8 +15,8 @@
 
 + (instancetype)sharedInstance;
 
--(void)showExceptionTool;
+- (void)showExceptionTools;
 
-- (NSArray *)crashInfoArray;
+- (NSArray *)crashInfoList;
 
 @end

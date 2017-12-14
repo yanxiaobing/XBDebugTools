@@ -41,7 +41,7 @@ void UncaughtExceptionHandler(NSException *exception) {
     return self;
 }
 
--(void)showExceptionTool{
+-(void)showExceptionTools{
     [XBExceptionViewController present];
 }
 
@@ -78,7 +78,8 @@ void UncaughtExceptionHandler(NSException *exception) {
     if (@available(iOS 10.0, *)) {
         UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
         UNMutableNotificationContent* content = [[UNMutableNotificationContent alloc] init];
-        content.title = @"🤣🤣🤣🤣🤣🤣";
+        NSString *projectName = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleExecutableKey];
+        content.title = projectName;
         content.body = exception.name;
         content.sound = [UNNotificationSound defaultSound];
         UNTimeIntervalNotificationTrigger* trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:2 repeats:NO];
@@ -99,7 +100,7 @@ void UncaughtExceptionHandler(NSException *exception) {
     }
 }
 
-- (NSArray *)crashInfoArray {
+- (NSArray *)crashInfoList {
     
     NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/XBExceptions"];
     NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
