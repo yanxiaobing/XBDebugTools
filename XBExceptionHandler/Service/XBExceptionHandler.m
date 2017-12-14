@@ -41,7 +41,7 @@ void UncaughtExceptionHandler(NSException *exception) {
     return self;
 }
 
--(void)showExceptionTool{
+-(void)showExceptionTools{
     [XBExceptionViewController present];
 }
 
@@ -58,18 +58,29 @@ void UncaughtExceptionHandler(NSException *exception) {
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    NSString *name = [formatter stringFromDate:[NSDate date]];
+    NSString *dateStr = [formatter stringFromDate:[NSDate date]];
     
     NSString *exceptionPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/XBExceptions"];
     if (![[NSFileManager defaultManager] fileExistsAtPath:exceptionPath]) {
         [[NSFileManager defaultManager] createDirectoryAtPath:exceptionPath withIntermediateDirectories:YES attributes:NULL error:NULL];
     }
-    NSString *path = [exceptionPath stringByAppendingFormat:@"/%@.log", name];
+    NSString *path = [exceptionPath stringByAppendingFormat:@"/%@", dateStr];
     
-    NSString *info = [NSString stringWithFormat:@"%@\n%@\n%@\n%@", [NSDate date], exception.name, exception.reason, exception.callStackSymbols];
+    NSString * systemVersion = [UIDevice currentDevice].systemVersion;
+    NSString * appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    NSString *appBuild = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
     
-    [info writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    XBExceptionInfo *info = [XBExceptionInfo new];
+    info.date = dateStr;
+    info.name = exception.name;
+    info.reason = exception.reason;
+    info.callStackSymbols = exception.callStackSymbols;
+    info.systemVersion = systemVersion;
+    info.appVersion = appVersion;
+    info.appBuild = appBuild;
     
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:info];
+    [data writeToFile:path atomically:YES];
 }
 
 // 发送通知
@@ -78,7 +89,9 @@ void UncaughtExceptionHandler(NSException *exception) {
     if (@available(iOS 10.0, *)) {
         UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
         UNMutableNotificationContent* content = [[UNMutableNotificationContent alloc] init];
-        content.title = @"🤣🤣🤣🤣🤣🤣";
+        NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+        NSString *app_Name = [infoDictionary objectForKey:@"CFBundleDisplayName"];
+        content.title = [NSString stringWithFormat:@"%@~奔溃啦🤣",app_Name];
         content.body = exception.name;
         content.sound = [UNNotificationSound defaultSound];
         UNTimeIntervalNotificationTrigger* trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:2 repeats:NO];
@@ -99,20 +112,16 @@ void UncaughtExceptionHandler(NSException *exception) {
     }
 }
 
-- (NSArray *)crashInfoArray {
+- (NSArray *)crashInfoList {
     
     NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/XBExceptions"];
     NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
     NSMutableArray *array = [NSMutableArray array];
     for (NSString *file in files) {
-        XBExceptionInfo *info = [[XBExceptionInfo alloc] init];
-        info.name = [file stringByReplacingOccurrencesOfString:@".log" withString:@""];
-        NSString *filePath = [path stringByAppendingPathComponent:file];
-        NSString *log = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-        info.log = log;
+        NSData *data = [NSData dataWithContentsOfFile:[NSString stringWithFormat:@"%@/%@",path,file]];
+        XBExceptionInfo *info = [NSKeyedUnarchiver unarchiveObjectWithData:data];
         [array insertObject:info atIndex:0];
     }
-    
     return array;
 }
 @end

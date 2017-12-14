@@ -22,11 +22,11 @@
     
     UITextView *textView = [[UITextView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:textView];
-    textView.text = self.info.log;
+    textView.text = self.info.description;
 }
 
 -(void)share{
-    [[UIPasteboard generalPasteboard] setString:self.info.log];
+    [[UIPasteboard generalPasteboard] setString:self.info.description];
 }
 
 - (void)didReceiveMemoryWarning {

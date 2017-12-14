@@ -26,7 +26,7 @@
     self.title = @"Crash 日志";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
     
-    _dataSource = [[XBExceptionHandler sharedInstance] crashInfoArray];
+    _dataSource = [[XBExceptionHandler sharedInstance] crashInfoList];
     _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -47,7 +47,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class) forIndexPath:indexPath];
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     XBExceptionInfo *info = _dataSource[indexPath.row];
-    cell.textLabel.text = info.name;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@-%@",info.date,info.name];
     return cell;
 }
 
