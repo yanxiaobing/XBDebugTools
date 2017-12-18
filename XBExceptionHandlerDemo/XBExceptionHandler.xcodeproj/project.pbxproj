@@ -11,7 +11,6 @@
 		ED08EA2E1FE7B8E8009CA1CA /* XBDebugInfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED08EA2D1FE7B8E8009CA1CA /* XBDebugInfoListViewController.m */; };
 		ED08EA311FE7B918009CA1CA /* XBDebugDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED08EA301FE7B918009CA1CA /* XBDebugDetailsViewController.m */; };
 		ED08EA351FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED08EA331FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.m */; };
-		ED08EA361FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED08EA341FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.xib */; };
 		EDEAB3371FE132240032F1C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB3361FE132240032F1C5 /* AppDelegate.m */; };
 		EDEAB33A1FE132250032F1C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB3391FE132250032F1C5 /* ViewController.m */; };
 		EDEAB33D1FE132250032F1C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDEAB33B1FE132250032F1C5 /* Main.storyboard */; };
@@ -31,7 +30,6 @@
 		ED08EA301FE7B918009CA1CA /* XBDebugDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBDebugDetailsViewController.m; sourceTree = "<group>"; };
 		ED08EA321FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBDebugInfoListTableViewCell.h; sourceTree = "<group>"; };
 		ED08EA331FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBDebugInfoListTableViewCell.m; sourceTree = "<group>"; };
-		ED08EA341FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XBDebugInfoListTableViewCell.xib; sourceTree = "<group>"; };
 		EDEAB3321FE132240032F1C5 /* XBExceptionHandler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XBExceptionHandler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDEAB3351FE132240032F1C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDEAB3361FE132240032F1C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				ED08EA301FE7B918009CA1CA /* XBDebugDetailsViewController.m */,
 				ED08EA321FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.h */,
 				ED08EA331FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.m */,
-				ED08EA341FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,7 +193,6 @@
 			files = (
 				EDEAB3421FE132250032F1C5 /* LaunchScreen.storyboard in Resources */,
 				EDEAB33F1FE132250032F1C5 /* Assets.xcassets in Resources */,
-				ED08EA361FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.xib in Resources */,
 				EDEAB33D1FE132250032F1C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
