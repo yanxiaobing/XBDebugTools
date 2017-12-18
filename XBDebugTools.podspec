@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name         = 'XBDebugTools'
-    s.version      = '1.0.6'
-    s.summary      = 'Catch Crash Exception Test'
+    s.version      = '1.0.7'
+    s.summary      = 'Catch Crash Exception And Collect Api Info'
     s.homepage     = 'https://github.com/yanxiaobing/XBDebugTools'
     s.license      = 'MIT'
     s.authors      = {'XBingo' => 'dove025@qq.com'}
