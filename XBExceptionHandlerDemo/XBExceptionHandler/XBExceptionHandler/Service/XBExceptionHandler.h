@@ -15,8 +15,10 @@
 
 + (instancetype)sharedInstance;
 
+//显示所有功能
 - (void)showExceptionTools;
 
+//获取奔溃日志列表
 - (NSArray *)crashInfoList;
 
 @end

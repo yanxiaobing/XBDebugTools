@@ -115,10 +115,10 @@
 		EDEAB36A1FE28D130032F1C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EDEAB35C1FE28CE90032F1C5 /* XBExceptionViewController.m */,
-				EDEAB35E1FE28CE90032F1C5 /* XBExceptionDetailsViewController.m */,
 				EDEAB3611FE28CE90032F1C5 /* XBExceptionViewController.h */,
+				EDEAB35C1FE28CE90032F1C5 /* XBExceptionViewController.m */,
 				EDEAB3631FE28CE90032F1C5 /* XBExceptionDetailsViewController.h */,
+				EDEAB35E1FE28CE90032F1C5 /* XBExceptionDetailsViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";

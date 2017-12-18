@@ -9,6 +9,11 @@
 #import "XBExceptionHandler.h"
 #import "XBExceptionViewController.h"
 
+@interface XBExceptionHandler()
+
+@end
+
+static NSString *const kLogPath = @"Library/Caches/XBExceptions";
 
 @implementation XBExceptionHandler
 {
@@ -60,7 +65,7 @@ void UncaughtExceptionHandler(NSException *exception) {
     formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     NSString *dateStr = [formatter stringFromDate:[NSDate date]];
     
-    NSString *exceptionPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/XBExceptions"];
+    NSString *exceptionPath = [NSHomeDirectory() stringByAppendingPathComponent:kLogPath];
     if (![[NSFileManager defaultManager] fileExistsAtPath:exceptionPath]) {
         [[NSFileManager defaultManager] createDirectoryAtPath:exceptionPath withIntermediateDirectories:YES attributes:NULL error:NULL];
     }
@@ -107,14 +112,14 @@ void UncaughtExceptionHandler(NSException *exception) {
         localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:2];
         localNotification.alertBody = exception.name;
         localNotification.soundName = UILocalNotificationDefaultSoundName;
-        localNotification.userInfo = @{@"type" : @"crash"};
+        localNotification.userInfo = @{@"type" : @"xb_crash"};
         [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     }
 }
 
 - (NSArray *)crashInfoList {
     
-    NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/XBExceptions"];
+    NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:kLogPath];
     NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
     NSMutableArray *array = [NSMutableArray array];
     for (NSString *file in files) {
