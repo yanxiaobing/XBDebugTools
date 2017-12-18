@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "XBExceptionHandler.h"
+#import "XBDebugTools.h"
 
 @interface ViewController ()
 
@@ -36,7 +36,7 @@
 }
 
 - (IBAction)btnClick:(id)sender {
-    [[XBExceptionHandler sharedInstance] showExceptionTools];
+    [[XBDebugTools sharedInstance] showExceptionTools];
 }
 
 @end

@@ -7,19 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED08EA2B1FE7A70B009CA1CA /* XBApiDebugInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ED08EA2A1FE7A70B009CA1CA /* XBApiDebugInfo.m */; };
+		ED08EA2E1FE7B8E8009CA1CA /* XBDebugInfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED08EA2D1FE7B8E8009CA1CA /* XBDebugInfoListViewController.m */; };
+		ED08EA311FE7B918009CA1CA /* XBDebugDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED08EA301FE7B918009CA1CA /* XBDebugDetailsViewController.m */; };
+		ED08EA351FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED08EA331FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.m */; };
+		ED08EA361FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED08EA341FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.xib */; };
 		EDEAB3371FE132240032F1C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB3361FE132240032F1C5 /* AppDelegate.m */; };
 		EDEAB33A1FE132250032F1C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB3391FE132250032F1C5 /* ViewController.m */; };
 		EDEAB33D1FE132250032F1C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDEAB33B1FE132250032F1C5 /* Main.storyboard */; };
 		EDEAB33F1FE132250032F1C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDEAB33E1FE132250032F1C5 /* Assets.xcassets */; };
 		EDEAB3421FE132250032F1C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDEAB3401FE132250032F1C5 /* LaunchScreen.storyboard */; };
 		EDEAB3451FE132250032F1C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB3441FE132250032F1C5 /* main.m */; };
-		EDEAB3641FE28CE90032F1C5 /* XBExceptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB35C1FE28CE90032F1C5 /* XBExceptionViewController.m */; };
-		EDEAB3651FE28CE90032F1C5 /* XBExceptionDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB35E1FE28CE90032F1C5 /* XBExceptionDetailsViewController.m */; };
-		EDEAB3661FE28CE90032F1C5 /* XBExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB3601FE28CE90032F1C5 /* XBExceptionHandler.m */; };
+		EDEAB3661FE28CE90032F1C5 /* XBDebugTools.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB3601FE28CE90032F1C5 /* XBDebugTools.m */; };
 		EDEAB3671FE28CE90032F1C5 /* XBExceptionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEAB3621FE28CE90032F1C5 /* XBExceptionInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED08EA291FE7A70B009CA1CA /* XBApiDebugInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBApiDebugInfo.h; sourceTree = "<group>"; };
+		ED08EA2A1FE7A70B009CA1CA /* XBApiDebugInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBApiDebugInfo.m; sourceTree = "<group>"; };
+		ED08EA2C1FE7B8E8009CA1CA /* XBDebugInfoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBDebugInfoListViewController.h; sourceTree = "<group>"; };
+		ED08EA2D1FE7B8E8009CA1CA /* XBDebugInfoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBDebugInfoListViewController.m; sourceTree = "<group>"; };
+		ED08EA2F1FE7B918009CA1CA /* XBDebugDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBDebugDetailsViewController.h; sourceTree = "<group>"; };
+		ED08EA301FE7B918009CA1CA /* XBDebugDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBDebugDetailsViewController.m; sourceTree = "<group>"; };
+		ED08EA321FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBDebugInfoListTableViewCell.h; sourceTree = "<group>"; };
+		ED08EA331FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBDebugInfoListTableViewCell.m; sourceTree = "<group>"; };
+		ED08EA341FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XBDebugInfoListTableViewCell.xib; sourceTree = "<group>"; };
 		EDEAB3321FE132240032F1C5 /* XBExceptionHandler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XBExceptionHandler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDEAB3351FE132240032F1C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDEAB3361FE132240032F1C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -30,14 +42,10 @@
 		EDEAB3411FE132250032F1C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDEAB3431FE132250032F1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDEAB3441FE132250032F1C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EDEAB35C1FE28CE90032F1C5 /* XBExceptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBExceptionViewController.m; sourceTree = "<group>"; };
-		EDEAB35D1FE28CE90032F1C5 /* XBExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBExceptionHandler.h; sourceTree = "<group>"; };
-		EDEAB35E1FE28CE90032F1C5 /* XBExceptionDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBExceptionDetailsViewController.m; sourceTree = "<group>"; };
+		EDEAB35D1FE28CE90032F1C5 /* XBDebugTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBDebugTools.h; sourceTree = "<group>"; };
 		EDEAB35F1FE28CE90032F1C5 /* XBExceptionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBExceptionInfo.h; sourceTree = "<group>"; };
-		EDEAB3601FE28CE90032F1C5 /* XBExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBExceptionHandler.m; sourceTree = "<group>"; };
-		EDEAB3611FE28CE90032F1C5 /* XBExceptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBExceptionViewController.h; sourceTree = "<group>"; };
+		EDEAB3601FE28CE90032F1C5 /* XBDebugTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBDebugTools.m; sourceTree = "<group>"; };
 		EDEAB3621FE28CE90032F1C5 /* XBExceptionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBExceptionInfo.m; sourceTree = "<group>"; };
-		EDEAB3631FE28CE90032F1C5 /* XBExceptionDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBExceptionDetailsViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,8 @@
 			children = (
 				EDEAB35F1FE28CE90032F1C5 /* XBExceptionInfo.h */,
 				EDEAB3621FE28CE90032F1C5 /* XBExceptionInfo.m */,
+				ED08EA291FE7A70B009CA1CA /* XBApiDebugInfo.h */,
+				ED08EA2A1FE7A70B009CA1CA /* XBApiDebugInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,8 +116,8 @@
 		EDEAB3691FE28D050032F1C5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				EDEAB35D1FE28CE90032F1C5 /* XBExceptionHandler.h */,
-				EDEAB3601FE28CE90032F1C5 /* XBExceptionHandler.m */,
+				EDEAB35D1FE28CE90032F1C5 /* XBDebugTools.h */,
+				EDEAB3601FE28CE90032F1C5 /* XBDebugTools.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -115,10 +125,13 @@
 		EDEAB36A1FE28D130032F1C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EDEAB3611FE28CE90032F1C5 /* XBExceptionViewController.h */,
-				EDEAB35C1FE28CE90032F1C5 /* XBExceptionViewController.m */,
-				EDEAB3631FE28CE90032F1C5 /* XBExceptionDetailsViewController.h */,
-				EDEAB35E1FE28CE90032F1C5 /* XBExceptionDetailsViewController.m */,
+				ED08EA2C1FE7B8E8009CA1CA /* XBDebugInfoListViewController.h */,
+				ED08EA2D1FE7B8E8009CA1CA /* XBDebugInfoListViewController.m */,
+				ED08EA2F1FE7B918009CA1CA /* XBDebugDetailsViewController.h */,
+				ED08EA301FE7B918009CA1CA /* XBDebugDetailsViewController.m */,
+				ED08EA321FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.h */,
+				ED08EA331FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.m */,
+				ED08EA341FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +196,7 @@
 			files = (
 				EDEAB3421FE132250032F1C5 /* LaunchScreen.storyboard in Resources */,
 				EDEAB33F1FE132250032F1C5 /* Assets.xcassets in Resources */,
+				ED08EA361FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.xib in Resources */,
 				EDEAB33D1FE132250032F1C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,12 +208,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDEAB3661FE28CE90032F1C5 /* XBExceptionHandler.m in Sources */,
+				EDEAB3661FE28CE90032F1C5 /* XBDebugTools.m in Sources */,
+				ED08EA2E1FE7B8E8009CA1CA /* XBDebugInfoListViewController.m in Sources */,
+				ED08EA311FE7B918009CA1CA /* XBDebugDetailsViewController.m in Sources */,
 				EDEAB33A1FE132250032F1C5 /* ViewController.m in Sources */,
+				ED08EA351FE7C13A009CA1CA /* XBDebugInfoListTableViewCell.m in Sources */,
+				ED08EA2B1FE7A70B009CA1CA /* XBApiDebugInfo.m in Sources */,
 				EDEAB3451FE132250032F1C5 /* main.m in Sources */,
 				EDEAB3671FE28CE90032F1C5 /* XBExceptionInfo.m in Sources */,
-				EDEAB3641FE28CE90032F1C5 /* XBExceptionViewController.m in Sources */,
-				EDEAB3651FE28CE90032F1C5 /* XBExceptionDetailsViewController.m in Sources */,
 				EDEAB3371FE132240032F1C5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

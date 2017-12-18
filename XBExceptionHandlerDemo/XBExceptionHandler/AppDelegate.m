@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "XBExceptionHandler.h"
+#import "XBDebugTools.h"
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     
     [self registerUserNotiicationOption];
-    [XBExceptionHandler sharedInstance];
+    [XBDebugTools sharedInstance];
     return YES;
 }
 
