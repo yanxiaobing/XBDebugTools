@@ -38,7 +38,7 @@
     _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    [_tableView registerNib:[UINib nibWithNibName:@"XBDebugInfoListTableViewCell" bundle:nil] forCellReuseIdentifier:@"XBDebugInfoListTableViewCell"];
+    [_tableView registerClass:XBDebugInfoListTableViewCell.class forCellReuseIdentifier:NSStringFromClass(XBDebugInfoListTableViewCell.class)];
     [self.view addSubview:_tableView];
     
 }

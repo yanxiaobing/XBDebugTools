@@ -211,7 +211,7 @@ void UncaughtExceptionHandler(NSException *exception) {
     
     NSError* error = nil;
     
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic
                                                        options:kNilOptions
                                                          error:&error];
     if (error) {

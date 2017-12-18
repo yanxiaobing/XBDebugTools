@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface XBDebugInfoListTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *titleLab;
-@property (weak, nonatomic) IBOutlet UILabel *subTitleLab;
 
 @property (nonatomic ,strong) id data;
 
