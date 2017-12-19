@@ -23,7 +23,7 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(share)];
     
-    UITextView *textView = [[UITextView alloc] initWithFrame:self.view.bounds];
+    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-64)];
     [self.view addSubview:textView];
     textView.editable = NO;
     
@@ -39,10 +39,6 @@
         textView.text = info.description;
         _objDes = info.description;
     }
-    
-    
-    
-    
 }
 
 -(void)share{

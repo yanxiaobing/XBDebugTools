@@ -7,7 +7,6 @@
 //
 
 #import "XBDebugTools.h"
-//#import "XBExceptionViewController.h"
 #import "XBDebugInfoListViewController.h"
 
 @interface XBDebugTools()
@@ -49,29 +48,27 @@ void UncaughtExceptionHandler(NSException *exception) {
 }
 
 -(void)showExceptionTools{
-    
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"XBDebugTools" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
-    
-    UIAlertAction *crashAction = [UIAlertAction actionWithTitle:@"crash 日志" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        [XBDebugInfoListViewController presentWithType:XBDebugTypeCrashInfo];
-    }];
-    
-    UIAlertAction *apiAction = [UIAlertAction actionWithTitle:@"api 日志" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [XBDebugInfoListViewController presentWithType:XBDebugTypeApiInfo];
-    }];
-    
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        
-    }];
-    
-    [alertController addAction:cancelAction];
-    [alertController addAction:crashAction];
-    [alertController addAction:apiAction];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
-    
+    if (@available(iOS 8.0, *)) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"XBDebugTools" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *crashAction = [UIAlertAction actionWithTitle:@"crash 日志" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            [XBDebugInfoListViewController presentWithType:XBDebugTypeCrashInfo];
+        }];
+        UIAlertAction *apiAction = [UIAlertAction actionWithTitle:@"api 日志" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [XBDebugInfoListViewController presentWithType:XBDebugTypeApiInfo];
+        }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        }];
+        [alertController addAction:cancelAction];
+        [alertController addAction:crashAction];
+        [alertController addAction:apiAction];
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
+    }
 }
 
 -(void)dealWithException:(NSException *)exception{
+//#if RELEASE
+//    return;
+//#endif
     [self recordException:exception];
     [self noticeException:exception];
     if (previousExceptionHandler) {
@@ -158,9 +155,12 @@ void UncaughtExceptionHandler(NSException *exception) {
                         response:(NSDictionary *)response
                          succeed:(BOOL)succeed{
     
+//#if RELEASE
+//    return;
+//#endif
+    
     XBApiDebugInfo *apiDebugInfo = [XBApiDebugInfo new];
     apiDebugInfo.domain = domain;
-    
     
     NSDate *date = [NSDate date];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
@@ -172,8 +172,8 @@ void UncaughtExceptionHandler(NSException *exception) {
     if (domain.length >0) {
         apiDebugInfo.url = [url stringByReplacingOccurrencesOfString:domain withString:@""];
     }
-    apiDebugInfo.params = [self jsonStringWithDic:params];
-    apiDebugInfo.response = [self jsonStringWithDic:response];
+    apiDebugInfo.params = params;
+    apiDebugInfo.response = response;
     apiDebugInfo.succeed = succeed;
 
     NSString *filePath = [NSHomeDirectory() stringByAppendingPathComponent:XBApiDebugsPath];
@@ -200,29 +200,6 @@ void UncaughtExceptionHandler(NSException *exception) {
         [array insertObject:info atIndex:0];
     }
     return array;
-}
-
-
-- (NSString *)jsonStringWithDic:(NSDictionary *)dic{
-    
-    if (dic.allKeys.count <= 0) {
-        return nil;
-    }
-    
-    NSError* error = nil;
-    
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic
-                                                       options:kNilOptions
-                                                         error:&error];
-    if (error) {
-        NSLog(@"XBDebugTool_json解析异常");
-        NSLog(@"XBDebugTool_%@",[error localizedFailureReason]);
-        return nil;
-    }
-    NSString *jsonString = [[NSString alloc] initWithData:jsonData
-                                                 encoding:NSUTF8StringEncoding];
-    return jsonString;
-    
 }
 
 @end

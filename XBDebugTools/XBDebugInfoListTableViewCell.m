@@ -22,7 +22,6 @@
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         [self setUpSubviews];
     }
     return self;
@@ -30,10 +29,16 @@
 
 -(void)setUpSubviews{
     _titleLab = [[UILabel alloc]init];
+    _titleLab.font = [UIFont systemFontOfSize:16];
+    _titleLab.numberOfLines = 2;
     [self.contentView addSubview:_titleLab];
     
     _subTitleLab = [[UILabel alloc]init];
+    _subTitleLab.font = [UIFont systemFontOfSize:14];
     [self.contentView addSubview:_subTitleLab];
+    
+    _titleLab.textColor = [UIColor blackColor];
+    _subTitleLab.textColor = [UIColor grayColor];
     
     _lineView = [[UIView alloc]init];
     _lineView.backgroundColor = [UIColor cyanColor];
@@ -52,10 +57,11 @@
 }
 
 -(void)layoutSubviews{
-    _titleLab.frame = CGRectMake(15, 0, self.bounds.size.width-40, self.bounds.size.height/2.0);
-    _subTitleLab.frame = CGRectMake(15, self.bounds.size.height/2.0, self.bounds.size.width - 40, self.bounds.size.height/2.0-1);
+    _titleLab.frame = CGRectMake(15, 0, self.bounds.size.width-30, self.bounds.size.height/3.0*2);
     
-    _lineView.frame = CGRectMake(15, self.bounds.size.height - 1, self.bounds.size.width, 1);
+    _subTitleLab.frame = CGRectMake(15, self.bounds.size.height/3.0*2.0, self.bounds.size.width - 30, self.bounds.size.height/3.0-1);
+    
+    _lineView.frame = CGRectMake(15, self.bounds.size.height - 0.5, self.bounds.size.width, 0.5);
     
     self.backgroundColor = [UIColor whiteColor];
     
@@ -63,9 +69,10 @@
         XBExceptionInfo *info = _data;
         _titleLab.text = info.name;
         _subTitleLab.text = info.date;
+        
     }else if ([_data isKindOfClass:XBApiDebugInfo.class]){
         XBApiDebugInfo *info = _data;
-        _titleLab.text = info.url;
+        _titleLab.text = [NSString stringWithFormat:@"%@%@",info.domain,info.url];
         _subTitleLab.text = info.date;
         if (!info.succeed) {
             self.backgroundColor = [UIColor redColor];

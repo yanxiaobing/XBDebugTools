@@ -34,7 +34,8 @@
 }
 
 -(NSString *)description{
-    return [NSString stringWithFormat:@"succeed: %@\n\n date: %@\n\n domain: %@\n\n url: %@\n\n params: %@\n\nresponse: %@\n\n",self.succeed ? @"成功":@"失败",self.date,self.domain,self.url,self.params,self.response];
+    
+    return [NSString stringWithFormat:@"succeed: %@\n\n date: %@\n\n domain: %@\n\n url: %@\n\n params:\n %@\n\nresponse: \n%@\n\n",self.succeed ? @"成功":@"失败",self.date,self.domain,self.url,self.params,self.response];
 }
 
 @end
