@@ -81,13 +81,17 @@ AFURLSessionManager * sessionManager = [[AFURLSessionManager alloc ] initWithSes
 //解析字典
 NSData *data = [self unzipData:responseObject];
 NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+
 #if DEBUG
 [[XBDebugTools sharedInstance] addApiDebugInfoWithDomain:@"" url:URLString params:params response:dict succeed:YES];
 #endif
+
 } failure:^(NSURLSessionDataTask *task, NSError *error) {
+
 #if DEBUG
 [[XBDebugTools sharedInstance] addApiDebugInfoWithDomain:@"" url:URLString params:params response:@{@"errorDes":error.localizedDescription} succeed:NO];
 #endif
+
 }];
 ```
 
