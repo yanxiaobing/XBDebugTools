@@ -7,14 +7,12 @@ XBDebugTools目前主要是用于收集Crash信息和API接口相关信息。
 本工具会持续维护，如果有通用需求会尽快加入进去。
 第一次制作开源工具库，难免有不足之处，还请大家不吝指教。
 
-## How To Get Started
--
+## 安装方式
 目前可以通过两种方式将XBDebugTools集成到您的项目中。
--
 - [下载 XBDebugTools](https://github.com/yanxiaobing/XBDebugTools/archive/master.zip) 然后将XBDebugTools文件夹拖入您的工程即可。
 - 通过CocoaPods集成
 
-## Installation with CocoaPods
+### 通过 CocoaPods 安装
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like XBDebugTools in your projects. You can install it with the following command:
 
@@ -26,7 +24,7 @@ $ gem install cocoapods
 
 #### Podfile
 
-To integrate AFNetworking into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate XBDebugTools into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
@@ -43,7 +41,7 @@ Then, run the following command:
 $ pod install
 ```
 
-## Architecture
+## 工程结构
 
 ### XBDebugTools
 
@@ -65,7 +63,7 @@ $ pod install
 `XBDebugTools` 包含了所有功能接口，目前主要包含Crash收集、添加API相关信息、展示这些Crash和Api信息的接口.
 
 ### Crash信息收集
-#### 在```AppDelegate.m```的```- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions```方法1```return```前执行```[XBDebugTools sharedInstance];```即可。具体如下：
+在```AppDelegate.m```的```- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions```方法1```return```前执行```[XBDebugTools sharedInstance];```即可。具体如下：
 ```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
@@ -75,10 +73,8 @@ $ pod install
 return YES;
 }
 ```
--(void)addApiDebugInfoWithDomain:(NSString *)domain url:(NSString *)url params:(NSDictionary *)params response:(NSDictionary *)response succeed:(BOOL)succeed;
-
 ### API信息收集
-#### 在API集中处理的地方调用```-(void)addApiDebugInfoWithDomain:(NSString *)domain url:(NSString *)url params:(NSDictionary *)params response:(NSDictionary *)response succeed:(BOOL)succeed```方法，即```[[XBDebugTools sharedInstance] addApiDebugInfoWithDomain:@"" url:URLString params:params response:dict succeed:YES];```。现在使用[AFNetworking](https://github.com/AFNetworking/AFNetworking/archive/master.zip) 项目比较多，这里则用改库举列子了。具体如下：
+在API集中处理的地方调用```-(void)addApiDebugInfoWithDomain:(NSString *)domain url:(NSString *)url params:(NSDictionary *)params response:(NSDictionary *)response succeed:(BOOL)succeed```方法，即```[[XBDebugTools sharedInstance] addApiDebugInfoWithDomain:@"" url:URLString params:params response:dict succeed:YES];```。现在使用[AFNetworking](https://github.com/AFNetworking/AFNetworking) 项目比较多，这里则用该库举例子了。具体如下：
 ```objective-c
 NSURLSessionConfiguration * configuration = [ NSURLSessionConfiguration  defaultSessionConfiguration ];
 AFURLSessionManager * sessionManager = [[AFURLSessionManager alloc ] initWithSessionConfiguration： configuration];
@@ -100,7 +96,7 @@ NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSON
 ```
 
 ### 展示收集的信息
-#### 在APP中提供一个展示收集的debug信息的入口，比如创建一个按钮，在响应想法中调用```[[XBDebugTools sharedInstance] showExceptionTools];```即可。
+在APP中提供一个展示收集的debug信息的入口，比如创建一个按钮，在响应想法中调用```[[XBDebugTools sharedInstance] showExceptionTools];```即可。
 
 ## License
 
