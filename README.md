@@ -96,7 +96,7 @@ NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSON
 ```
 
 ### 展示收集的信息
-在APP中提供一个展示收集的debug信息的入口，比如创建一个按钮，在响应想法中调用```[[XBDebugTools sharedInstance] showExceptionTools];```即可。
+在APP中提供一个展示收集的debug信息的入口，比如创建一个按钮，在响应想法中调用```objective-c[[XBDebugTools sharedInstance] showExceptionTools];```即可。
 
 ## License
 
