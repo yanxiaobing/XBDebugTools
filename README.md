@@ -66,7 +66,6 @@ $ pod install
 在```AppDelegate.m```的```- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions```方法1```return```前执行```[XBDebugTools sharedInstance];```即可。具体如下：
 ```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
 #if DEBUG
 [XBDebugTools sharedInstance]; //一定放在return前，紧贴return语句，否则可能被第三方收集工具重写相关方法导致收集不到Crash信息
 #endif
@@ -79,16 +78,13 @@ return YES;
 NSURLSessionConfiguration * configuration = [ NSURLSessionConfiguration  defaultSessionConfiguration ];
 AFURLSessionManager * sessionManager = [[AFURLSessionManager alloc ] initWithSessionConfiguration： configuration];
 [sessionManager POST:URLString parameters:params progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-
 //解析字典
 NSData *data = [self unzipData:responseObject];
 NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-
 #if DEBUG
 [[XBDebugTools sharedInstance] addApiDebugInfoWithDomain:@"" url:URLString params:params response:dict succeed:YES];
 #endif
 } failure:^(NSURLSessionDataTask *task, NSError *error) {
-
 #if DEBUG
 [[XBDebugTools sharedInstance] addApiDebugInfoWithDomain:@"" url:URLString params:params response:@{@"errorDes":error.localizedDescription} succeed:NO];
 #endif
@@ -96,9 +92,7 @@ NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSON
 ```
 
 ### 展示收集的信息
-在APP中提供一个展示收集的debug信息的入口，比如创建一个按钮，在响应想法中调用```objective-c
-[[XBDebugTools sharedInstance] showExceptionTools];
-```即可。
+在APP中提供一个展示收集的debug信息的入口，比如创建一个按钮，在响应方法中调用```[[XBDebugTools sharedInstance] showExceptionTools];```即可。
 
 ## License
 
