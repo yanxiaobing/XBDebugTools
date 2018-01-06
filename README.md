@@ -8,6 +8,9 @@ XBDebugTools目前主要是用于收集Crash信息和API接口相关信息。
 
 >  第一次制作开源工具库，难免有不足之处，还请大家不吝指教。
 
+## 示例演示
+![img](https://github.com/yanxiaobing/XBDebugTools/blob/master/DebugTools.gif)
+
 ## 安装方式
 目前可以通过两种方式将XBDebugTools集成到您的项目中。
 - [下载 XBDebugTools](https://github.com/yanxiaobing/XBDebugTools/archive/master.zip) 然后将[XBDebugTools]()文件夹拖入您的工程即可。
