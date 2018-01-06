@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'XBDebugTools'
-    s.version      = '1.0.9'
+    s.version      = '1.0.10'
     s.summary      = 'Catch Crash Exception And Collect Api Info'
     s.homepage     = 'https://github.com/yanxiaobing/XBDebugTools'
     s.license      = 'MIT'
