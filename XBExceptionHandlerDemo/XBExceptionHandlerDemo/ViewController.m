@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "XBDebugTools.h"
+#import "XBHttpService.h"
 
 @interface ViewController ()
 
@@ -25,6 +26,18 @@
     NSLog(@"%@",arr[3]);
 }
 
+
+- (IBAction)request:(UIButton *)sender {
+    
+    NSDictionary *params = @{@"xiaobing":@"xiaobing"};
+    NSString *url = @"xiaobing/xiaobingge";
+    [[XBHttpService sharedInstance] POSTWithURL:url parameters:params success:^(NSDictionary *responseObject) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    
+}
 
 - (IBAction)showDebugInfo:(UIButton *)sender {
     

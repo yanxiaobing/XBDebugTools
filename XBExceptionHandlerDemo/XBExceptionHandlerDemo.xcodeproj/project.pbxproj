@@ -14,6 +14,7 @@
 		ED1267D12000C37900FB108B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED1267D02000C37900FB108B /* Assets.xcassets */; };
 		ED1267D42000C37900FB108B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1267D22000C37900FB108B /* LaunchScreen.storyboard */; };
 		ED1267D72000C37900FB108B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1267D62000C37900FB108B /* main.m */; };
+		ED1267DF2000CD1200FB108B /* XBHttpService.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1267DE2000CD1200FB108B /* XBHttpService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		ED1267D32000C37900FB108B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED1267D52000C37900FB108B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1267D62000C37900FB108B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED1267DD2000CD1200FB108B /* XBHttpService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBHttpService.h; sourceTree = "<group>"; };
+		ED1267DE2000CD1200FB108B /* XBHttpService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBHttpService.m; sourceTree = "<group>"; };
 		F882E58AA8CD62943171DDC6 /* Pods-XBExceptionHandlerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XBExceptionHandlerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XBExceptionHandlerDemo/Pods-XBExceptionHandlerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +87,8 @@
 			children = (
 				ED1267C72000C37900FB108B /* AppDelegate.h */,
 				ED1267C82000C37900FB108B /* AppDelegate.m */,
+				ED1267DD2000CD1200FB108B /* XBHttpService.h */,
+				ED1267DE2000CD1200FB108B /* XBHttpService.m */,
 				ED1267CA2000C37900FB108B /* ViewController.h */,
 				ED1267CB2000C37900FB108B /* ViewController.m */,
 				ED1267CD2000C37900FB108B /* Main.storyboard */,
@@ -221,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED1267CC2000C37900FB108B /* ViewController.m in Sources */,
+				ED1267DF2000CD1200FB108B /* XBHttpService.m in Sources */,
 				ED1267D72000C37900FB108B /* main.m in Sources */,
 				ED1267C92000C37900FB108B /* AppDelegate.m in Sources */,
 			);

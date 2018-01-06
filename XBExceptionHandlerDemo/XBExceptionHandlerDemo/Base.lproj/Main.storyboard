@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2I6-N3-lGQ">
-                                <rect key="frame" x="87" y="381" width="200" height="50"/>
+                                <rect key="frame" x="87" y="468.5" width="200" height="50"/>
                                 <color key="backgroundColor" red="0.8980392157" green="0.63921568630000003" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4Yh-kP-bvb"/>
@@ -53,12 +53,31 @@
                                     <action selector="showDebugInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6ZP-Yb-Vua"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKQ-bT-9Gp">
+                                <rect key="frame" x="87" y="388.5" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NQt-F4-jlr"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="OGR-0H-el9"/>
+                                    <constraint firstAttribute="width" constant="200" id="Z8b-sx-YUN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="dlC-4w-BUM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="模拟请求">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="request:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ex1-Hh-sju"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2I6-N3-lGQ" firstAttribute="top" secondItem="Hsv-aL-yfB" secondAttribute="bottom" constant="22.5" id="8Pq-FO-caf"/>
+                            <constraint firstItem="kKQ-bT-9Gp" firstAttribute="top" secondItem="Hsv-aL-yfB" secondAttribute="bottom" constant="30" id="1JA-5k-nB6"/>
                             <constraint firstItem="2I6-N3-lGQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D2m-82-rj6"/>
                             <constraint firstItem="Hsv-aL-yfB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NgZ-PX-odC"/>
+                            <constraint firstItem="kKQ-bT-9Gp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iGf-43-IbQ"/>
+                            <constraint firstItem="2I6-N3-lGQ" firstAttribute="top" secondItem="kKQ-bT-9Gp" secondAttribute="bottom" constant="30" id="iRg-dK-zGd"/>
                             <constraint firstItem="Hsv-aL-yfB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zWS-eA-Ltc"/>
                         </constraints>
                     </view>

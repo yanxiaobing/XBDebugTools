@@ -1,0 +1,1 @@
+../../../XBDebugTools/XBDebugTools/XBDebugDetailsViewController.h
