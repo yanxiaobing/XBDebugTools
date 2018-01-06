@@ -1,9 +1,9 @@
 //
 //  main.m
-//  XBExceptionHandler
+//  XBExceptionHandlerDemo
 //
-//  Created by XBingo on 2017/12/13.
-//  Copyright © 2017年 XBingo. All rights reserved.
+//  Created by XBingo on 2018/1/6.
+//  Copyright © 2018年 XBingo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

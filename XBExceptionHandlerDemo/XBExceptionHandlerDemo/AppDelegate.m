@@ -1,15 +1,14 @@
 //
 //  AppDelegate.m
-//  XBExceptionHandler
+//  XBExceptionHandlerDemo
 //
-//  Created by XBingo on 2017/12/13.
-//  Copyright © 2017年 XBingo. All rights reserved.
+//  Created by XBingo on 2018/1/6.
+//  Copyright © 2018年 XBingo. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "XBDebugTools.h"
 
-@interface AppDelegate ()<UNUserNotificationCenterDelegate>
+@interface AppDelegate ()
 
 @end
 
@@ -18,9 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    [self registerUserNotiicationOption];
-    [XBDebugTools sharedInstance];
     return YES;
 }
 
@@ -49,41 +45,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-//-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
-//
-//    NSDictionary *userInfo = notification.userInfo;
-//    if ([userInfo[@"type"] isEqualToString:@"crash"]) {
-//        [self performSelector:@selector(handleResponseActionNotification:) withObject:userInfo afterDelay:2];
-//    }
-//
-//}
-//
-//-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
-//
-//}
-//
-//- (BOOL)handleResponseActionNotification:(NSDictionary *)userInfo{
-//
-//
-//    return NO;
-//}
-
-- (void)registerUserNotiicationOption {
-    if (@available(iOS 10.0, *))
-    {
-        UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
-        center.delegate = self;
-        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound + UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
-            granted ? NSLog(@"author success!") : NSLog(@"author failed!");
-        }];
-    } else {
-        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings
-                                                                             settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
-    }
-    
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 
 
