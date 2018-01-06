@@ -46,7 +46,7 @@
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"仅看失败" style:UIBarButtonItemStylePlain target:self action:@selector(changeApiDataSource:)];
     }
     
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-64) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-64) style:UITableViewStyleGrouped];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [_tableView registerClass:XBDebugInfoListTableViewCell.class forCellReuseIdentifier:NSStringFromClass(XBDebugInfoListTableViewCell.class)];
