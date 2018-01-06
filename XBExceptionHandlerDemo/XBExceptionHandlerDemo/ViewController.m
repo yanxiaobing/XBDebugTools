@@ -30,7 +30,7 @@
 - (IBAction)request:(UIButton *)sender {
     
     NSDictionary *params = @{@"xiaobing":@"xiaobing"};
-    NSString *url = @"xiaobing/xiaobingge";
+    NSString *url = @"/xiaobing/xiaobingge";
     [[XBHttpService sharedInstance] POSTWithURL:url parameters:params success:^(NSDictionary *responseObject) {
         
     } failure:^(NSError *error) {
