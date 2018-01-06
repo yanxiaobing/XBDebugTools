@@ -569,7 +569,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3CA77E5AEA8F2F4708FA3E5E72024FC7 /* Debug */ = {
+		2C58D6AB7BE3F9FD6C5D7C3414841CB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AE85F5F1E80D8F16D775AC701123875C /* XBDebugTools.xcconfig */;
 			buildSettings = {
@@ -578,7 +578,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/XBDebugTools/XBDebugTools-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -653,28 +653,6 @@
 			};
 			name = Debug;
 		};
-		90F0438E87D867F87668BF47B99551C5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE85F5F1E80D8F16D775AC701123875C /* XBDebugTools.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/XBDebugTools/XBDebugTools-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -746,6 +724,28 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0C25963D42992D155D563287D73DBC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE85F5F1E80D8F16D775AC701123875C /* XBDebugTools.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/XBDebugTools/XBDebugTools-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -844,8 +844,8 @@
 		DA01F8C687C8B403D077CF1CE22516A7 /* Build configuration list for PBXNativeTarget "XBDebugTools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3CA77E5AEA8F2F4708FA3E5E72024FC7 /* Debug */,
-				90F0438E87D867F87668BF47B99551C5 /* Release */,
+				2C58D6AB7BE3F9FD6C5D7C3414841CB4 /* Debug */,
+				D0C25963D42992D155D563287D73DBC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

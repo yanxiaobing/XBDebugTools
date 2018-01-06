@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - XBDebugTools (1.0.8)
+  - XBDebugTools (1.0.10)
 
 DEPENDENCIES:
   - AFNetworking
@@ -22,7 +22,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  XBDebugTools: 414c8a9522a669cf2552d5807081676d99c70259
+  XBDebugTools: 1b80b307a35275acc49286793cef4e45e6f1494a
 
 PODFILE CHECKSUM: 1580170a6ce6647da6d53ac338bb85d1fc03e1c8
 
