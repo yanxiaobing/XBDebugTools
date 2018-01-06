@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "XBDebugTools.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @end
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+#warning 如果项目本身不需要通知提醒，并且希望通知提醒Crash，需要注册一下通知权限
+    [self registerUserNotiicationOption];
+#warning 一定放在return前，否则可能被第三方收集工具重写相关方法导致收集不到Crash信息
+    [XBDebugTools sharedInstance];
     return YES;
 }
 
@@ -45,6 +51,22 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)registerUserNotiicationOption {
+    if (@available(iOS 10.0, *))
+    {
+        UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound + UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            granted ? NSLog(@"author success!") : NSLog(@"author failed!");
+        }];
+    } else {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings
+                                                                             settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+    }
+    
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 
 

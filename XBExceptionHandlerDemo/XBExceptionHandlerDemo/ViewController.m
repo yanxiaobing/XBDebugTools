@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "XBDebugTools.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,16 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)crash:(UIButton *)sender {
+    NSArray *arr = @[@(1)];
+    NSLog(@"%@",arr[3]);
+}
+
+
+- (IBAction)showDebugInfo:(UIButton *)sender {
+    
+    [[XBDebugTools sharedInstance] showExceptionTools];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
